@@ -6,5 +6,17 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "Danar Widi Personal Blog"
+  },
+  plugins: [
+    `gatsby-plugin-postcss`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      }
+    }]
 }
